@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/d52b01c1d7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="main.css">
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.2/Tone.js"></script>
+        <script src="./assets/config/colors.js"></script>
+        <script src="./instrument.js"></script>
+        <script src="./assets/config/bubbles.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+
+            <header>
+                <div class="logo">
+                    <i class="fab fa-stumbleupon-circle" id="logo"></i>
+                </div> 
+
+                <div class="heading">
+                    <h1>Sound<span id="heading-circle">Circle</span></h1>
+                </div>
+
+                               
+            </header>
+
+            <div class="app">
+
+                <div class="menu">
+                    <div class="transport"> 
+                        <i class="fas fa-play-circle" id="play"></i>
+                        <i class="fas fa-pause-circle" id="pause"></i>
+                        <i class="fas fa-stop-circle" id="stop"></i>
+                    </div>
+
+                    <div class="tempo">
+
+                        <div class="bpm">
+                            <label for="bpm"><span id="bpm-label"></span> BPM</label>
+                            <input type="range" value="120" name="bpm" min="40" max="240" id="bpm" class="slider">
+                        </div>
+                        <div class="swing">
+                            <label for="swing"><span id="swing-label"></span> Swing</label>
+                            <input type="range" value="0" name="swing" min="0" max="100" id="swing" class="slider">
+                        </div>
+                            
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="animation" id="visual">
+                    <div class="settings">
+
+                        <div class="gain">
+                            <label for="gain"><span id="gain-label"></span> Gain</label>
+                            <input type="range" value="70" name="gain" min="0" max="100" id="gain" class="slider">
+                        </div>
+                        <div class="duration">
+                            <label for="duration"><span id="duration-label"></span> Duration</label>
+                            <input type="range" value="50" name="duration" min="0" max="100" id="duration" class="slider">
+                        </div>
+                        <div class="dist">
+                            <label for="dist"><span id="dist-label"></span> Distortion</label>
+                            <input type="range" value="0" name="dist" min="0" max="100" id="dist" class="slider">
+                        </div>
+                        <div class="rev">
+                            <label for="rev"><span id="rev-label"></span> Reverb</label>
+                            <input type="range" value="0" name="rev" min="0" max="100" id="rev" class="slider">
+                        </div>
+                            
+                        
+                    </div>
+                </div>
+
+                <div class="instruments" id="instruments">
+
+                </div>
+
+                <div class="steps" id="steps">
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="app.js"></script>
+        <script src="./assets/config/setup.js"></script>
+    </body>
+</html>

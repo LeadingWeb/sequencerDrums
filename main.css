@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    --color1: #000000;
+    --color2: #050910;
+    --color3: #47361c;
+    --color4: #835a18;
+    --color5: #ffffff;
+    --color6: #14213d;
+    --color7: #fca311;
+    --color8: #ffff99;
+    --color9: #e5e5e5;
+    --color10: #ffffff;
+    
+    --bgcolor: #777886;
+    --bg: #000000;
+    --pad: hsla(0, 0%, 100%, 0.3);
+
+    --height: 150px;
+
+    background: var(--bgcolor);
+    color: #ffffff;
+
+    font-family: 'Quicksand', sans-serif;
+    text-transform: lowercase;
+    
+}
+
+.wrapper{
+    width: 90%;
+    margin: 10px auto;
+    
+}
+
+header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    background: var(--bgcolor);
+}
+
+
+header h1{
+
+    font-size: 3.5rem;
+    text-transform: lowercase;
+    padding: 10px;
+    
+    color: var(--color10);
+}
+#heading-circle{
+    color: var(--color6);
+}
+
+#logo{
+    font-size: 3rem;
+    background-color: var(--color2);
+    padding: 5px;
+    border-radius: 50%;
+    color: var(--color10);
+}
+
+.app{
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--color2);
+    padding: 10px;
+    border-radius: 6%;
+
+    box-shadow: 2px 2px 2px var(--color6);
+}
+.app div div {
+    border-radius: 6%
+}
+
+
+.menu{
+    height: var(--height);
+    background: var(--color1);
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+}
+.animation{
+    height: var(--height);
+    background: var(--color6);
+    position: relative;
+
+}
+.instruments{
+    height: var(--height);
+    background: var(--color6);
+    display: flex;
+    padding: 10px;
+}
+
+
+.steps{
+    height: var(--height);
+    background: var(--color10);
+    display: flex;
+    padding: 10px;
+    border-bottom-left-radius: 6%;
+    border-bottom-right-radius: 6%;
+}
+.steps div:nth-child(4n-3){
+    border-radius: 30%;
+}
+
+.instrument{
+    width: 6.25%;
+    height: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 0 4px;
+    box-shadow: 2px 2px 2px var(--color6);
+
+    transition: 0.5s ease-in-out;
+}
+
+.instrument:hover{
+    cursor: pointer;
+    outline: 3px solid var(--color3);
+}
+.step{
+    width: 6.25%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 4px;
+    box-shadow: 2px 2px 2px var(--color6);
+
+    transition: 0.5s ease-in-out;
+}
+.step:hover{
+    cursor: pointer;
+    outline: 3px solid var(--color3);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.transport i{
+    font-size: 4rem;
+    color: var(--color10);
+    background-color: var(--color6);
+    border: 3px solid var(--color6);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 2px var(--color6);
+
+    transition: 0.5s ease-in-out;
+}
+
+.transport i:hover{
+    cursor: pointer;
+    border-top: #fff;
+    font-size: 4.2rem;
+}
+.tempo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tempo div {
+    margin: 10px;
+}
+
+.tempo div input{
+    width: 300px;
+}
+
+
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: var(--bgcolor); /* Grey background */
+  outline: #fff; /* Remove outline */
+   /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+    border-radius: 6%;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--color10); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 3px solid var(--color6);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.bubble{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+@keyframes bubble {
+    0%{
+        left: 0%;
+        top: 0;
+        border-radius: 50%;
+
+    }
+
+    100%{
+        left: 100%;
+        top: 50%;
+        opacity: 0;
+        width: 2px;
+        height: 2px;
+    }
+}
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    align-items: center;
+}
+.settings div{
+    padding: 10px;
+    margin: 2px auto;
+    width: 80%;
+    align-self: center;
+}
+
+@keyframes pad{
+    0%{
+        border-radius: 6%;
+        background-color: #fff;
+    }
+    40%{
+        border-radius: 30%;
+    }
+    100%{
+        border-radius: 6%;
+    }
+}
